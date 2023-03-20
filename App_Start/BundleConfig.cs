@@ -9,6 +9,7 @@ namespace BirthdayDiaryApp
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
+                        "~/Scripts/jquery.min.js",
                         "~/Scripts/jquery-{version}.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
@@ -20,9 +21,14 @@ namespace BirthdayDiaryApp
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+                      "~/Scripts/responsiveslides.js",
                       "~/Scripts/bootstrap.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
+                        "~/Content/responsive.css",
+                        "~/Content/responsiveslides.css",
+                        "~/Content/zerogrid.css",
+                        "~/Content/style.css",
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
         }

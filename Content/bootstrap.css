@@ -89,6 +89,7 @@ sub {
 }
 img {
   border: 0;
+    
 }
 svg:not(:root) {
   overflow: hidden;
@@ -230,7 +231,7 @@ th {
   }
   img {
     max-width: 100% !important;
-  }
+  } 
   p,
   h2,
   h3 {
@@ -1087,6 +1088,7 @@ body {
   line-height: 1.42857143;
   color: #333333;
   background-color: skyblue;
+  
 }
 input,
 button,
@@ -1585,6 +1587,7 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  
 }
 @media (min-width: 768px) {
   .container {
