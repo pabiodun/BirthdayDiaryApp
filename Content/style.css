@@ -74,8 +74,10 @@ nav .wrap-nav{height: 37px;}
 /* ------------------Navigation---------------- */
 
 .featured{margin:100px auto;}
-.featured .wrap-featured{background:#333}
+.featured .wrap-featured{background:#333;}
 .featured .wrap-featured .slider{padding:5px;}
+
+
 
 /* -------------------------------------------- */
 /* ------------------Content------------------- */
