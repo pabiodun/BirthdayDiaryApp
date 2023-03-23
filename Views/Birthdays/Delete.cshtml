@@ -4,14 +4,15 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete</h2>
+<div class="inner">
 
-<h3>Are you sure you want to delete this?</h3>
+<h3 style="color:red; font-family:'Monotype Corsiva'; text-align:center; font-size:45px">
+    Are you sure you want to delete this?</h3>
 <div>
-    <h4>Birthdays</h4>
+    <h2>Delete Birthday</h2>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
+        <dt style="font-family: 'Monotype Corsiva'; font-size:25px">
             @Html.DisplayNameFor(model => model.BirthName)
         </dt>
 
@@ -19,7 +20,7 @@
             @Html.DisplayFor(model => model.BirthName)
         </dd>
 
-        <dt>
+        <dt style="font-family: 'Monotype Corsiva'; font-size:25px">
             @Html.DisplayNameFor(model => model.BirthDate)
         </dt>
 
@@ -32,9 +33,12 @@
     @using (Html.BeginForm()) {
         @Html.AntiForgeryToken()
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
+        <div class="form-actions no-color" style="text-align:right">
+            <input type="submit" value="Delete" class="btn btn-danger" />
+            <div style="font-family:'Monotype Corsiva'; margin-top:10px">
             @Html.ActionLink("Back to List", "Index")
+            </div>
         </div>
     }
+</div>
 </div>

@@ -4,13 +4,12 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
 
-<div>
-    <h4>Birthdays</h4>
+<div class="inner">
+    <h2>Birthday Details</h2>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
+        <dt style="font-family: 'Monotype Corsiva'; font-size:25px">
             @Html.DisplayNameFor(model => model.BirthName)
         </dt>
 
@@ -18,7 +17,7 @@
             @Html.DisplayFor(model => model.BirthName)
         </dd>
 
-        <dt>
+        <dt style="font-family: 'Monotype Corsiva'; font-size:25px">
             @Html.DisplayNameFor(model => model.BirthDate)
         </dt>
 
@@ -27,8 +26,10 @@
         </dd>
 
     </dl>
+    <p style="font-family:'Monotype Corsiva'">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
+

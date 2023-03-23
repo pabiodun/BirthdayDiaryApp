@@ -1,29 +1,48 @@
 ﻿
-@using (Html.BeginForm("ShowSearchResults", "Birthdays"))
-{
-    @Html.AntiForgeryToken()
 
-    <div class="form-horizontal">
-        <h2 style="margin-top:80px">Search for a Birthday</h2>
-        <hr />
+<div class="inner">
 
-        <div class="form-group">
+    @using (Html.BeginForm("ShowSearchResults", "Birthdays"))
 
-            <div class="col-md-10">
-                @Html.TextBox("SearchPhrase")
+    {
+        @Html.AntiForgeryToken()
 
+        <div class="form-horizontal">
+            <h2>Search for a Birthday</h2>
+            <hr />
+
+            <div class="form-group">
+                <div class="col-md-10" style="border:solid; border-color:grey; border-radius:5px; border-width:30px;
+                                              margin-left:55px">
+                    @Html.TextBox("SearchPhrase")
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-10">
+                    <input type="submit" value="Search" class="btn btn-default" style="margin-left: 40px" />
+                </div>
             </div>
         </div>
+    }
+    <div style="font-family:'Monotype Corsiva'">
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</div>
+<div class="featured" style="margin-top:20px">
+    <div class="wrap-featured zerogrid">
+        <div class="slider">
+            <div class="rslides_container">
+                <ul class="rslides" id="slider">
+                    <li><img src="~/Images/slide01.jpg" /></li>
+                    <li><img src="~/Images/slide02.jpg" /></li>
+                    <li><img src="~/Images/slide03.jpg" /></li>
 
-        <div class="form-group">
-            <div class="col-md-10">
-                <input type="submit" value="Search" class="btn btn-primary" />
+                </ul>
             </div>
         </div>
     </div>
-}
+    </div>
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+
 

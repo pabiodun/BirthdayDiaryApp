@@ -66,5 +66,44 @@ textarea {
     font-size:x-large;
 }
 
+.inner {
+    background: #ffffff;
+    padding: 26px 40px 25px 40px;
+    position: relative;
+   margin-top:100px;
+   margin-left:150px;
+   max-width: 70%;
+   
+}
+    .inner h2 {
+        margin-top: 80px;
+        text-align: center;
+        font-family: 'French Script MT';
+        font-size: 55px;
+    }
+    .index-inner {
+    padding: 26px 40px 25px 40px;
+    position: relative;
+    margin-top: 100px;
+    margin-left: 150px;
+    max-width: 75%;
+    background-color:ivory
+}
+    .index-inner h2 {
+        margin-top: 80px;
+        text-align: center;
+        font-family: 'French Script MT';
+        font-size: 60px;
+    }
+    .index-inner th {
+        margin-left:45px
+    }
 
-
+    .index-inner p {
+        font-family:'Monotype Corsiva';
+        font-size: 20px;
+    }
+    .index-inner th {
+        font-family: 'Monotype Corsiva';
+        font-size: 30px;
+    }

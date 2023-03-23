@@ -1084,7 +1084,7 @@ html {
 }
 body{
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.42857143;
     color: #333333;
     background-color: grey;
@@ -1673,6 +1673,7 @@ pre code {
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
+ 
 }
 .col-xs-1,
 .col-xs-2,
@@ -3077,9 +3078,15 @@ select[multiple].input-lg {
 .form-horizontal .checkbox {
   min-height: 27px;
 }
+.form-horizontal h2 {
+    text-align: center;
+    font-family:'French Script MT';
+    font-size: 60px;
+}
+
 .form-horizontal .form-group {
-  margin-right: -15px;
-  margin-left: -15px;
+    margin-right: -15px;
+    margin-left: -15px;
 }
 @media (min-width: 768px) {
   .form-horizontal .control-label {
