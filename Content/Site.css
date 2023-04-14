@@ -107,3 +107,12 @@ textarea {
         font-family: 'Monotype Corsiva';
         font-size: 30px;
     }
+
+@media (min-width: 768px) {
+    .index-inner {
+     
+        margin-bottom: 0;
+        vertical-align: middle;
+        
+    }
+}

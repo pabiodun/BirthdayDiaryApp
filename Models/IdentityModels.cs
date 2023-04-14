@@ -31,5 +31,8 @@ namespace BirthdayDiaryApp.Models
         }
 
         public System.Data.Entity.DbSet<BirthdayDiaryApp.Models.Birthdays> Birthdays { get; set; }
+        public System.Data.Entity.DbSet<BirthdayDiaryApp.Models.Comment> Comments { get; set; }
+        public System.Data.Entity.DbSet<BirthdayDiaryApp.Models.Reply> Replies { get; set; }
+
     }
 }

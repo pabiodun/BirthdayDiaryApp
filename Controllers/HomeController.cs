@@ -10,6 +10,7 @@ namespace BirthdayDiaryApp.Controllers
     {
         public ActionResult Index()
         {
+            Session["UseId"] = 0;
             return View();
         }
 
@@ -26,5 +27,6 @@ namespace BirthdayDiaryApp.Controllers
 
             return View();
         }
+
     }
 }

@@ -19,6 +19,11 @@ namespace BirthdayDiaryApp.Models
         public IList<UserLoginInfo> CurrentLogins { get; set; }
         public IList<AuthenticationDescription> OtherLogins { get; set; }
     }
+    public class ReplyVM
+    {
+        public string Reply { get; set; }
+        public int CID { get; set; }
+    }
 
     public class FactorViewModel
     {

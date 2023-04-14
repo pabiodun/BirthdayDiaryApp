@@ -10,6 +10,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using BirthdayDiaryApp.Models;
 
+
 namespace BirthdayDiaryApp.Controllers
 {
     [Authorize]
@@ -17,6 +18,8 @@ namespace BirthdayDiaryApp.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+        
+
 
         public AccountController()
         {
@@ -60,7 +63,7 @@ namespace BirthdayDiaryApp.Controllers
             ViewBag.ReturnUrl = returnUrl;
             return View();
         }
-
+        
         //
         // POST: /Account/Login
         [HttpPost]
@@ -91,7 +94,7 @@ namespace BirthdayDiaryApp.Controllers
             }
         }
 
-        //
+        
         // GET: /Account/VerifyCode
         [AllowAnonymous]
         public async Task<ActionResult> VerifyCode(string provider, string returnUrl, bool rememberMe)

@@ -8,6 +8,8 @@ using System.Web;
 using System.Web.Mvc;
 using BirthdayDiaryApp.Models;
 
+
+
 namespace BirthdayDiaryApp.Controllers
 {
     public class BirthdaysController : Controller
@@ -18,6 +20,47 @@ namespace BirthdayDiaryApp.Controllers
         public ActionResult Index()
         {
             return View(db.Birthdays.ToList());
+        }
+
+        // GET: Birthdays/ChatRoom
+        public ActionResult ChatRoom()
+        {
+            var comments = db.Comments.Include(x => x.Replies).ToList();
+            return View(comments);
+        }
+
+        // POST: Birthdays/PostReply
+        [HttpPost]
+        
+        public ActionResult PostReply(ReplyVM model)
+        {
+           
+            Reply r = new Reply();
+            r.Text = model.Reply;
+            r.CommentId = model.CID;
+            
+            r.CreatedOn = DateTime.Now;
+
+            db.Replies.Add(r);
+            db.SaveChanges();
+            return RedirectToAction("ChatRoom");
+        }
+
+        // POST: Birthdays/PostComment
+        [HttpPost]
+        
+        public ActionResult PostComment(string CommentText)
+        {
+            
+            Comment c = new Comment();
+            c.Text = CommentText;
+            c.CreatedOn = DateTime.Now;
+            int Email = 0;
+            c.UserId = Email;
+            db.Comments.Add(c);
+            db.SaveChanges();
+
+            return RedirectToAction ("ChatRoom");
         }
 
         // GET: Birthdays/ShowSearchForm
@@ -132,6 +175,17 @@ namespace BirthdayDiaryApp.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+       // [HttpPost, ActionName("Remove")]
+        //[ValidateAntiForgeryToken]
+       // [Authorize]
+       // public ActionResult RemoveConfirmed(int id, Comment comments)
+      //  {
+      //      Comment comment = db.Comments.Find(id);
+       //     db.Comments.Remove(comments);
+       //     db.SaveChanges();
+      //      return RedirectToAction("ChatRoom");
+     //   }
 
         protected override void Dispose(bool disposing)
         {
