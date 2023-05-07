@@ -237,6 +237,9 @@
     <Content Include="Images\photo03.png" />
     <Content Include="Images\photo04.png" />
     <Content Include="Images\photo05.png" />
+    <Content Include="Images\post01.png" />
+    <Content Include="Images\post02.png" />
+    <Content Include="Images\post03.png" />
     <Content Include="Images\slide01.jpg" />
     <Content Include="Images\slide02.jpg" />
     <Content Include="Images\slide03.jpg" />
