@@ -1,4 +1,0 @@
-﻿#!/bin/bash
-
-# Build the project
-dotnet build --configuration Release
